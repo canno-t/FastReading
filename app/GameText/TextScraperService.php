@@ -14,7 +14,7 @@ class TextScraperService
     {
     }
 
-    private function getRandomArticleUrl():string{
+    public function getRandomArticleUrl():string{
         $page = random_int(0, 8000);
         $url = env("SCRAPED_URL").'/news?page='.$page;
         $body = Http::withoutVerifying()->get($url)->body();
@@ -26,8 +26,8 @@ class TextScraperService
         return env('SCRAPED_URL').$articles_list[$rnd];
     }
 
-    public function getArticleText():array{
-        $body2 = Http::withoutVerifying()->get($this->getRandomArticleUrl())->body();
+    public function getArticleText($url):array{
+        $body2 = Http::withoutVerifying()->get($url)->body();
         $crawler = new Crawler($body2);
         return $crawler->filter('article > div.clearfix > p')->each(function ($paragraph){
             return $paragraph->text();

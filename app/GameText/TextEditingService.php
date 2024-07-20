@@ -16,6 +16,6 @@ class TextEditingService
         return $text;
     }
     public function plainText(array $text){
-        return implode('\n',$text);
+        return implode("\n",$text);
     }
 }
