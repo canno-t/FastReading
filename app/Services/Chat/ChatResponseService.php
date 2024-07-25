@@ -19,7 +19,7 @@ class ChatResponseService
     public function toHtml(string $chatResponse){
         return <<<HTML
     <p>{$this->getExplanation($chatResponse)}</p>
-    <p>{$this->getPercentage($chatResponse)}</p>
+    <p id="resoult">{$this->getPercentage($chatResponse)}</p>
 HTML;
 
     }
