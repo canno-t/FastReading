@@ -17,7 +17,9 @@ const interval = setInterval(function (){
     let sec = seconds-(min*60);
     if(sec<10){
         time.innerText = min+':0'+sec;
-        time.style.color = 'red';
+        if( min===0){
+            time.style.color = 'red';
+        }
     }
     else{
         time.innerText = min+':'+sec;
