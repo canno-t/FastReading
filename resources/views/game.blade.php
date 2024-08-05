@@ -59,6 +59,11 @@ box-shadow: 14px 13px 20px -20px rgba(66, 68, 90, 1);">
                     </form>
                 </div>
             </div>
+            <div  id="loader" style="display: none">
+                <div class="card card-body mb-5" id="loading_card">
+                    <span class="loader"></span>
+                </div>
+            </div>
             <div id="third-stage" style="display: none">
                 <div>
                     <h4>Wyniki</h4>

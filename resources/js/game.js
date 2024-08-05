@@ -32,8 +32,11 @@ document.getElementById('form').onsubmit = (event) =>{
     let html = document.getElementById('response-card');
     let form = document.getElementById('form');
     let formData = new FormData(form);
+    let loader = document.getElementById('loader');
     let csrf = document.getElementById('_token').content;
     const url = "http://localhost/chat";
+    document.getElementById('second-stage').style.display = 'none';
+    loader.style.display = 'block'
     try {
         fetch(url, {
             method:'POST',
@@ -46,7 +49,7 @@ document.getElementById('form').onsubmit = (event) =>{
         }).then(data=>{
            html.innerHTML = data
         }).then(function (){
-            document.getElementById('second-stage').style.display = 'none';
+            loader.style.display = 'none';
             document.getElementById('third-stage').style.display = 'block';
             let bar = document.getElementById('progress-chart');
             let percent = document.getElementById('resoult').innerText.split('%')[0];
