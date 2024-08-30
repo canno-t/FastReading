@@ -1,0 +1,61 @@
+.loader {
+    width: 200px;
+    height: 200px;
+    border: 15px solid gray;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.tips{
+    border: 0px;
+    width: 33%;
+    height: auto;
+    margin-right: 1rem;
+    text-align: center;
+    aspect-ratio: 1/1;
+}
+@media (max-width: 1300px) {
+    #info-mobile{
+        display: flex;
+    }
+    .info{
+        display: none;
+    }
+}
+@media(min-width: 1300px){
+    #info-mobile{
+        display: none;
+    }
+    .info{
+        display: flex;
+    }
+}
+#progress-bar{
+    flex-grow: 1;
+    background-color: #aac9fa;
+    height: 2rem;
+    border-radius: 0px 5px 5px 0px;
+}
+#progress-chart{
+    width: 2%;
+    background-color: #639fff;
+    height: 2rem;
+    border-radius: 5px 0px 0px 5px;
+}
+.mobile-tips{
+    aspect-ratio: 1/0.2;
+}
+#loading_card{
+    align-items: center;
+}
