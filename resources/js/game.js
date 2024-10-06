@@ -34,7 +34,7 @@ document.getElementById('form').onsubmit = (event) =>{
     let formData = new FormData(form);
     let loader = document.getElementById('loader');
     let csrf = document.getElementById('_token').content;
-    const url = "http://localhost/chat";
+    const url = "/chat";
     document.getElementById('second-stage').style.display = 'none';
     loader.style.display = 'block'
     try {
